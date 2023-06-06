@@ -1,0 +1,24 @@
+<style>
+    input[type=submit] {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+</style>
+
+{% extends 'base.html' %}
+{% block body %}<br>
+<h1 align="center">ADD</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter your name" class="form-control"><br>
+    <input type="text" name="desc" placeholder="enter the description"class="form-control"><br>
+    <input type="text" name="year" placeholder="enter year" class="form-control"><br>
+    <input type="file" name="img"class="form-control"><br>
+
+    <input type="submit" class="center">
+</form>
+{% endblock %}

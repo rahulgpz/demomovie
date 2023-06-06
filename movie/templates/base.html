@@ -1,0 +1,21 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<nav class="navbar my_nav">
+  <span class="navbar-brand mb-0 h1"><strong>Movies</strong></span>
+    <ul class="navbar-nav ">
+         <li class="nav-item ">
+             <a class="nav-link" style="color:black;" href="{% url 'map:add_movie' %}"><strong>Add Movie</strong></a>
+      </li>
+    </ul>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

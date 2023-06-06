@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<div class="row">
+    <div class="col-md-6"><br>
+        <img src="{{mov.img.url}}" width="300px" height="350px">
+
+    </div>
+<div class="col-md-6"><br>
+
+    <h2>{{mov.name}}</h2>
+
+    <h4>{{mov.desc}}</h4>
+    <h6>{{mov.year}}</h6>
+    <a href="{% url 'map:update' mov.id %}">Edit</a>
+    <a href="{% url 'map:delete' mov.id %}">Delete</a>
+</div></div></div>
+
+{% endblock %}
+
